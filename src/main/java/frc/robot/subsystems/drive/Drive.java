@@ -41,14 +41,14 @@ import java.util.List;
 import java.util.function.Supplier;
 import org.littletonrobotics.junction.AutoLogOutput;
 import org.littletonrobotics.junction.Logger;
-
+import frc.robot.subsystems.drive.DriveIO;
 /**
  * Class that extends the Phoenix 6 SwerveDrivetrain class and implements Subsystem so it can easily
  * be used in command-based projects.
  */
 public class Drive extends SubsystemBase {
   private final DriveIO io;
-  private final DriveIOInputsAutoLogged inputs;
+  private final DriveIO.DriveIOInputsAutoLogged inputs;
   private final ModuleIOInputsAutoLogged[] modules = ArrayBuilder.buildModuleAutoLogged();
 
   private final SwerveDriveKinematics kinematics =
